@@ -1,53 +1,68 @@
-# Geophysical Equipment Rental Manager
+# Python Fundamentals Application: Building Geophysical Equipment Rental Manager (GERM)
 
 ## Project Overview
-The **Geophysical Equipment Rental Manager** is a console-based Python application designed to help small businesses, laboratories, universities, and other organizations efficiently manage their rental equipment. The system allows users to:
+The **Geophysical Equipment Rental Manager (GERM)** is a console-based Python application developed to replace inefficient manual logs and spreadsheets with a structured, reliable system.  
 
-- View, sort, and filter equipment
-- Add new equipment to the inventory
-- Remove existing equipment
-- Rent out and return equipment
-- Track rental records, including client and payment details
+Small businesses, laboratories, and universities often struggle with tracking equipment usage, availability, and payments, which lead to lost time, errors, and missed revenue. This project provides a streamlined solution that digitises inventory and rental workflows, ensuring accuracy, accountability, and ease of use.
 
-This project is ideal for organizations that need a simple yet effective tool to manage inventory and rental operations.
+The system enables users to:
+- View, sort, and filter equipment  
+- Add new equipment with validation rules  
+- Remove items when no longer needed  
+- Rent out and return equipment seamlessly  
+- Track rental history, client details, and payments  
+
+---
 
 ## Features
 
 ### Equipment Management
-- **Display Equipment List**: View all equipment with optional sorting (by daily rate) and filtering (by availability status).  
-- **Add Equipment**: Add new items to the inventory with unique codes, names, and daily rental rates.  
-- **Remove Equipment**: Remove equipment that is not currently rented.  
+- **Display Equipment List**: View inventory with sorting (by daily rate) and filtering (by availability).  
+- **Add Equipment**: Add new items with unique codes, names, and daily rates.  
+- **Remove Equipment**: Safely remove items only when they are not currently rented.  
 
 ### Rental Operations
-- **Rent Equipment**: Record rental transactions with client details, start and end dates, and automatically calculate total fees.  
-- **Return Equipment**: Mark equipment as returned, update condition (Good/Damaged), and remove corresponding rental records.  
+- **Rent Equipment**: Record transactions with client details, rental period, and automatically calculated fees.  
+- **Return Equipment**: Mark items as returned, update condition (Good/Damaged), and close the rental record.  
 
 ### Rental Records Management
-- **Display Rental Records**: View all rental transactions with optional sorting (by total fee) and filtering (by client ID or name).  
-- **Dynamic Summaries**: Generates rental summaries for each transaction for easy tracking and verification.
+- **Display Rental Records**: Access complete transaction history with sorting (by total fee) and filtering (by client ID or name).  
+- **Dynamic Summaries**: Generate detailed transaction summaries for reporting and verification.  
+
+---
 
 ## How to Run
 
-1. Ensure you have **Python 3.7+** installed.
-2. Download the project files.
-3. Open a terminal/command prompt in the project directory.
-4. Run the main program.
-5. Follow the Main Menu prompts to navigate through the system.
+1. Ensure you have **Python 3.7+** installed.  
+2. Download the project files.  
+3. Open a terminal/command prompt in the project directory.  
+4. Run the main program:  
+   ```bash
+   python main.py
+5. Follow the Main Menu prompts to manage equipment, rentals, and records.
+
+---
 
 ## Input Formats & Constraints
-- **Equipment Code**: 3 letters followed by 2 digits (e.g., GEO01, CAM10)  
-- **Client ID**: 'CLI' followed by 2 digits (e.g., CLI01, CLI02)  
+- **Equipment Code**: 3 letters followed by 2 digits (e.g., `GEO01`, `CAM10`)  
+- **Client ID**: 'CLI' followed by 2 digits (e.g., `CLI01`, `CLI02`)  
 - **Dates**: DD-MM-YYYY format  
 - **Contact Info**: Numbers only, 8–12 digits  
 - **Rental Rate**: Positive integer
 
+---
+
 ## Notes
-- Rented equipment cannot be removed until returned.  
-- Equipment condition must be updated upon return.  
-- Rental calculations are based on the number of rental days multiplied by the daily rate.
+- Items cannot be removed while rented.
+- Equipment condition must be updated upon return.
+- Rental fees are calculated as *number of days × daily rate*.
+
+---
 
 ## Dependencies
-- Built-in Python libraries only (`datetime`)
+- Python standard libraries only (`datetime`)
+
+---
 
 ## Example Workflow
 1. Add a new seismograph (`GEO01`) to the inventory.  
@@ -55,6 +70,11 @@ This project is ideal for organizations that need a simple yet effective tool to
 3. View all rental records, sorted by highest total fee.  
 4. Return the seismograph and update its condition if needed.  
 5. Remove any damaged equipment that requires maintenance.
+
+---
+
+## Impact
+GERM demonstrates how a data-driven, rule-based system can transform routine operations into an efficient, transparent process. By designing this project, I applied my skills in Python programming, data validation, workflow design, and usability-focused problem-solving to deliver a tool that reduces errors, saves time, and supports better decision-making.
 
 ---
 
